@@ -1,0 +1,61 @@
+
+---
+title: "STAT540 – Project 2 Findings"
+author: "Shantal Ewell"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(tidyverse)
+```
+
+# Introduction
+
+This report summarizes the key findings based on Mississippi traffic stop data and ACS demographic information.
+The objective was to demonstrate data wrangling skills using dplyr and tidyr.
+
+# Data Description
+
+Two datasets were analyzed:
+- MS_trafficstops_bw_age.csv: 211,211 observations, 11 variables
+- MS_acs2015_bw.csv: 82 observations, 5 variables
+
+# Key Findings
+
+## Column Selection & Filtering
+Used select(), filter(), starts_with(), and ends_with() to extract key information.
+
+## Age Patterns
+- Youngest driver stopped: 7  
+- Oldest driver stopped: 86
+
+## Arrangement
+Earliest stop ID after arranging: MS-2013-07659
+
+## Black Driver Stops
+Officer D003 made 198 stops involving Black drivers.
+
+## Tunica County Subset
+Total stops: 4
+
+## Grouped Summary
+White drivers in Amite County:
+- Average age: 42.10
+- Minimum age: 15
+
+## Officer Counts
+Officer C055 made the most stops: 2,940
+
+## Joined Data
+Merged stop counts with ACS demographic data using left_join().
+
+## Wide Format
+Converted violation table from long to wide format with pivot_wider().
+
+# Project Conclusion
+This project demonstrates dplyr, tidyr, summarization, joins, and reshaping skills applied to real-world Mississippi traffic stop data. This project was my favorite project.
+
